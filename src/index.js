@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import reportWebVitals from "./reportWebVitals";
 import MessageApp from "./components/MessageApp";
 import { Provider } from "react-redux";
 import "./App.css";
@@ -8,12 +7,7 @@ import configureStore from "./store/configureStore";
 import { getMessagesFromDatabase } from "./actions/messages";
 import "./firebase/firebaseConfig";
 import { firebase } from "./firebase/firebaseConfig";
-import {
-  addUserToDatabase,
-  login,
-  loginAction,
-  logoutAction,
-} from "./actions/auth";
+import { addUserToDatabase, loginAction, logoutAction } from "./actions/auth";
 import "bootstrap/dist/css/bootstrap.css";
 import { getUsersFromDatabase } from "./actions/users";
 
@@ -51,8 +45,3 @@ firebase.auth().onAuthStateChanged((user) => {
     root.render(result);
   }
 });
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

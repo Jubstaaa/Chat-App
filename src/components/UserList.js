@@ -6,7 +6,7 @@ const UserList = (props) => {
   return (
     <ul
       className="list-unstyled chat-list mt-2 mb-0  overflow-auto"
-      style={{ height: "380px" }}
+      style={{ height: "350px" }}
     >
       {props.users.map((user) => {
         if (user.uid != props.isAuthenticated) {
@@ -25,5 +25,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-// Higher Order Component (HOC)
 export default connect(mapStateToProps)(UserList);

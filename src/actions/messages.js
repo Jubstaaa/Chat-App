@@ -1,5 +1,4 @@
 import database from "../firebase/firebaseConfig";
-import { connect } from "react-redux";
 import { store } from "../index";
 
 export const addMessage = (message) => ({
@@ -21,39 +20,6 @@ export const addMessageToDatabase = (messageData = {}) => {
     };
 
     database.ref("messages").push(message);
-  };
-};
-
-export const removeMessage = (id) => ({
-  type: "REMOVE_MESSAGE",
-  id: id,
-});
-
-export const removeMessageFromDatabase = (id) => {
-  return (dispatch) => {
-    return database
-      .ref(`messages/${id}`)
-      .remove()
-      .then(() => {
-        dispatch(removeMessage(id));
-      });
-  };
-};
-
-export const editMessage = (id, updates) => ({
-  type: "EDIT_MESSAGE",
-  id,
-  updates,
-});
-
-export const editMessageFromDatabase = (id, updates) => {
-  return (dispatch) => {
-    return database
-      .ref(`messages/${id}`)
-      .update(updates)
-      .then(() => {
-        dispatch(editMessage(id, updates));
-      });
   };
 };
 
@@ -82,20 +48,13 @@ export const getMessagesFromDatabase = () => {
       function getDifference(array1, array2) {
         return array1.filter((object1) => {
           return !array2.some((object2) => {
-            console.log(object1.key);
-            return object1.key === object2.key;
+            return object1.id === object2.id;
           });
         });
       }
+      const addMessage = getDifference(messages, store.getState().messages);
 
-      // 👇️ [{id: 2, name: 'John'}]
-      console.log(getDifference(messages, store.getState().messages));
-
-      dispatch(setMessages(messages));
+      dispatch(setMessages(addMessage));
     });
   };
 };
-
-export const clearMessages = () => ({
-  type: "CLEAR_MESSAGES",
-});

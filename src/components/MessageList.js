@@ -26,5 +26,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-// Higher Order Component (HOC)
 export default connect(mapStateToProps)(MessageList);
