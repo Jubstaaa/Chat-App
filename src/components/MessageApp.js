@@ -95,7 +95,7 @@ const MessageListPage = (props) => {
                       </div>
                       <div className="d-flex ml-auto justify-content-between p-0 col-6 col-md-4">
                         <button
-                          className=" btn btn-secondary p-2 btn-sm nav-link align-middle "
+                          className="align-self-center align-self-center btn btn-secondary p-2 btn-sm nav-link align-middle "
                           onClick={logout}
                         >
                           Logout
@@ -108,7 +108,7 @@ const MessageListPage = (props) => {
 
                             chatList.style.left = "-767px";
                           }}
-                          className=" d-sm-block d-md-none"
+                          className=" d-sm-block d-md-none align-self-center"
                         >
                           <i className="fas fa-arrow-right fa-3x text-dark"></i>
                         </a>
@@ -117,7 +117,10 @@ const MessageListPage = (props) => {
                   </li>
                 ) : (
                   <div className="d-flex  align-items-center justify-content-around">
-                    <button className="btn btn-warning " onClick={login}>
+                    <button
+                      className="align-self-center btn btn-warning "
+                      onClick={login}
+                    >
                       Login
                     </button>
                     <a
@@ -128,7 +131,7 @@ const MessageListPage = (props) => {
 
                         chatList.style.left = "-767px";
                       }}
-                      className=" d-sm-block d-md-none"
+                      className="align-self-center d-sm-block d-md-none"
                     >
                       <i className="fas fa-arrow-right fa-3x text-dark"></i>
                     </a>
