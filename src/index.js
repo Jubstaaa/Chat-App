@@ -23,7 +23,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div className="vh-100 d-flex align-items-center justify-content-center">
     <div
-      style={{ width: "10rem", height: "10rem" }}
+      style={{ width: "20rem", height: "20rem", borderWidth: "2em" }}
       className="spinner-border text-primary m-5"
       role="status"
     >

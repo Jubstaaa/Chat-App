@@ -11,6 +11,7 @@ import { firebase } from "..//firebase/firebaseConfig";
 
 let title = document.title;
 let notificationCount = 1;
+
 const MessageListPage = (props) => {
   useEffect(() => {
     setTimeout(() => {

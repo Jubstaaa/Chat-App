@@ -1,5 +1,7 @@
 body {
   background-color: #f4f7f6;
+  background-image: url(./background.gif);
+  background-size: cover;
   margin-top: 20px;
 }
 .card {
