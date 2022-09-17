@@ -1,28 +1,27 @@
-# Leave A Message To The World
+# Chat App
 
-> React App where you can see the messages sent to the application and send a message after logging in.
+> React chat room app where you can log in and chat.
 
 > Click to view live demo
-> (https://jubstaa-leave-a-message-to-the-world.netlify.app/)
+> (https://jubstaa-chatapp.netlify.app/)
 
 ## Techs I Used
 
     - react
-    - react-router-dom
     - redux
     - redux-thunk
     - firebase realtime database
     - firebase auth
-    - PrivateRoute
-    - history
     - bootstrap
     - create-react-app
 
 ## Features
 
-    - you can see sent messages
-    - you can see the profile picture, name, and date and time of the sender of the message.
-    - you can send message after login with google auth
-    - when you log in, your profile picture will appear in the navbar and you can log out
-    - after logging in, you can edit and delete your own messages.
+    - You can see the sent messages and application works in real time.
+    - In left tab, you can see people who are already logged into app.
+    - People who have closed browser tab or logged out appear offline.
+    - You can send message after login with google auth
+    - Messages sent by you appear on right, and messages sent by other people appear on left.
+    - When a message arrives, you will automatically scroll down to last message.
+    - If you switch to a different tab or app is not visible on your screen, you will receive a notification sound when a message arrives and notification number is added to the title of app tab.
     - responsive design
