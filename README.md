@@ -2,6 +2,8 @@
 
 > React chat room app where you can log in and chat.
 
+![Imgur](https://i.imgur.com/ieVf6vL.png)
+
 > Click to view live demo
 > (https://jubstaa-chatapp.netlify.app/)
 
